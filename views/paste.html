@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title><{$title}> -- <{@name}></title>
+    <link rel="stylesheet" media="screen" href="/assets/stylesheets/reset.css">
+    <link rel="stylesheet" media="screen" href="/assets/stylesheets/main.css">
+    <link rel="stylesheet" media="screen" href="/assets/stylesheets/md.css">
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <{if:@width:800}>
+      <div id="toc"></div>
+    <{!if}>
+    <div id="main-content" style="width: <{@width}>px">
+      <div id="raw-button">
+        <a href="/raw/<{@name}>">raw</a> | <a href="/download/<{@name}>">download</a>
+      </div>
+      <{$content}>
+    </div>
+    <script src="/assets/javascripts/toc.js"></script>
+  </body>
+</html>
